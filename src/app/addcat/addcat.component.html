@@ -1,0 +1,47 @@
+<div class="content">
+  <div *ngFor="let item of cats; let i = index">
+    <div
+      *ngIf="i + 1 === cats.length"
+      class="button"
+      (click)="saveInfo(item)"
+      [routerLink]="['open']"
+      #lastCat
+    >
+      <img
+        [src]="item?.imageUrl"
+        alt="{{ item?.name }}"
+        style="width: 25rem"
+        class="img-fluid me-4"
+      />
+      <div>
+        {{ item?.prefix }}
+        {{ item?.name }}
+        {{ item?.lastName }}
+      </div>
+      <div>
+        {{ item?.title }}
+      </div>
+    </div>
+    <div
+      *ngIf="i + 1 != cats.length"
+      class="button"
+      (click)="saveInfo(item)"
+      [routerLink]="['opend']"
+    >
+      <img
+        [src]="item?.imageUrl"
+        alt="{{ item?.name }}"
+        style="width: 25rem"
+        class="img-fluid me-4"
+      />
+      <div>
+        {{ item?.prefix }}
+        {{ item?.name }}
+        {{ item?.lastName }}
+      </div>
+      <div>
+        {{ item?.title }}
+      </div>
+    </div>
+  </div>
+</div>

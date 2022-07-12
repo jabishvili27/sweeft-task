@@ -1,0 +1,45 @@
+.contentiner {
+  margin-left: 5vw;
+  border: 1px solid black;
+  width: 90vw;
+}
+.content {
+  margin-top: 4vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.info {
+  border: 1px solid black;
+  width: 45vw;
+}
+.addres {
+  margin-left: 5px;
+  border: 1px solid black;
+  width: 20vw;
+}
+.content2 {
+  margin-top: 50px;
+}
+.friend-list {
+  margin: 2px;
+  color: blue;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.friend-list:hover {
+  color: red;
+}
+.friend-list:active {
+  font-size: 20px;
+}
+.friends {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.button {
+  margin-left: 5px;
+  margin-top: 5px;
+}

@@ -1,0 +1,71 @@
+<div class="contentiner">
+  <div class="content">
+    <img
+      [src]="cats?.imageUrl"
+      alt="{{ cats?.name }}"
+      style="width: 20rem"
+      class="img-fluid me-4"
+    />
+    <div class="info">
+      info
+      <h1>{{ cats?.id }}</h1>
+      <h5>
+        {{ cats?.prefix }}
+        {{ cats?.name }}
+        {{ cats?.lastName }}
+      </h5>
+      <div>
+        {{ cats?.title }}
+      </div>
+
+      <div>Email:{{ cats?.email }}</div>
+      <div>Ip Address:{{ cats?.ip }}</div>
+      <div>Ip Address:{{ cats?.ip }}</div>
+      <div>Job Area:{{ cats?.jobArea }}</div>
+      <div>Job type:{{ cats?.jobType }}</div>
+    </div>
+    <div class="addres">
+      addres
+      <div>city:{{ cats?.address.city }}</div>
+      <div>country:{{ cats?.address.country }}</div>
+      <div>state:{{ cats?.address.state }}</div>
+      <div>street addres:{{ cats?.address.streetAddress }}</div>
+      <div>Zip:{{ cats?.address.zipCode }}</div>
+      <div></div>
+    </div>
+  </div>
+  <div class="friends">
+    <span
+      class="friend-list"
+      *ngFor="let item of results"
+      (click)="returnCatPage(item)"
+    >
+      {{ item?.prefix }}
+      {{ item?.name }}
+      {{ item?.lastName }}>
+    </span>
+  </div>
+  <div class="content2">
+    <h1>friends:</h1>
+    <div class="friends">
+      <div *ngFor="let item of cat?.list">
+        <button class="button" (click)="saveInfo(item)">
+          <img
+            [src]="item?.imageUrl"
+            alt="{{ item?.name }}"
+            style="width: 25rem"
+            class="img-fluid me-4"
+          />
+          <div>
+            {{ item?.prefix }}
+            {{ item?.name }}
+            {{ item?.lastName }}
+          </div>
+          <div>
+            {{ item?.title }}
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
